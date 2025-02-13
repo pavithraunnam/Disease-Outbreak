@@ -3,6 +3,8 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 
+import warnings
+warnings.filterwarnings("ignore",category=UserWarning)
 st.set_page_config(page_title='Prediction Of Disease Outbreaks',
                    layout='wide',
                    page_icon="doctor")
@@ -126,3 +128,4 @@ if selectd == 'Parkinsons prediction':
     # Display the result only after button is pressed
     if parkinsons_diagnosis:
         st.success(parkinsons_diagnosis)
+
